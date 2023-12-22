@@ -11,9 +11,10 @@ namespace API.Data
 
             var products = new List<Product>
             {
+                //below is manual object creation to test out the database and my entity framework to see if the database will be seeded
                 		new Product
                 {
-                    Name = "Angular Speedster Board 2000",
+                    Name = "Angular Board 2000",
                     Description =
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
                     Price = 20000,
@@ -24,7 +25,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Green Angular Board 3000",
+                    Name = "Green Board 3000",
                     Description = "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
                     Price = 15000,
                     PictureUrl = "/images/products/sb-ang2.png",
@@ -56,7 +57,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "React Board Super Whizzy Fast",
+                    Name = "Board Super Whizzy Fast",
                     Description =
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
                     Price = 25000,
