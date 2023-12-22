@@ -27,4 +27,18 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//creating the database with the exception of a bad migration 
+var scope = app.Services.CreateScope(); 
+var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
+var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>(); 
+try
+{
+    context.Database.Migrate(); 
+    Dbinitializer.Initialize(context); 
+}
+catch (Exception ex)
+{
+    logger.LogError(ex, "A problem occured during a migration"); 
+}
+
 app.Run();
